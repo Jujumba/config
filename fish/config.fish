@@ -7,20 +7,27 @@ zoxide init fish | source
 function cd # Alias `cd` to `zoxide`
     z $argv
 end
+
 function h
     Hyprland $argv
 end
+
 function ipy
     ipython $argv
 end
+
 function p
     poweroff
 end
+
 function py
-    python
+    python $argv
 end
 
-set PATH $PATH /home/jujumba/scripts /home/jujumba/.cargo/bin
+function libreoffice
+    libreoffice $argv &> /dev/null &
+end
+
+set PATH $PATH /home/jujumba/.scripts /home/jujumba/.cargo/bin /home/jujumba/.local/bin
 
 set fish_greeting ""
-
